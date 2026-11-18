@@ -1,0 +1,1504 @@
+{
+ "model_version": "1.0.0",
+ "split": {
+  "train_end": "2024-12-31",
+  "valid_end": "2025-07-31",
+  "cv_folds": 5
+ },
+ "tasks": {
+  "x_runs": {
+   "task": "x_runs",
+   "kind": "reg",
+   "n_train": 110680,
+   "n_valid": 23084,
+   "n_test": 50787,
+   "features": [
+    "innings",
+    "balls_rem",
+    "wkts_rem",
+    "score_before",
+    "crr",
+    "target_runs_req",
+    "rrr",
+    "rrr_minus_crr",
+    "over_idx",
+    "ball_in_over",
+    "bat_elo",
+    "bowl_elo",
+    "elo_diff",
+    "venue_avg_first",
+    "is_ipl",
+    "is_t20i",
+    "striker_order",
+    "striker_balls_before",
+    "striker_runs_before",
+    "is_left",
+    "is_pace"
+   ],
+   "candidates": {
+    "hgb_0": {
+     "params": {
+      "learning_rate": 0.05,
+      "max_iter": 150,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 200,
+      "l2_regularization": 1.0
+     },
+     "valid_RMSE": 1.8001762234964522
+    },
+    "hgb_1": {
+     "params": {
+      "learning_rate": 0.05,
+      "max_iter": 250,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 400,
+      "l2_regularization": 5.0
+     },
+     "valid_RMSE": 1.8000975096877472
+    },
+    "hgb_2": {
+     "params": {
+      "learning_rate": 0.03,
+      "max_iter": 300,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 400,
+      "l2_regularization": 10.0
+     },
+     "valid_RMSE": 1.8009800986377975
+    },
+    "hgb_3": {
+     "params": {
+      "learning_rate": 0.05,
+      "max_iter": 120,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 300,
+      "l2_regularization": 1.0
+     },
+     "valid_RMSE": 1.799426443675311
+    }
+   },
+   "selected_params": {
+    "learning_rate": 0.05,
+    "max_iter": 120,
+    "max_leaf_nodes": 7,
+    "min_samples_leaf": 300,
+    "l2_regularization": 1.0
+   },
+   "valid_selection": {
+    "linear": 1.8107113322735826,
+    "hist_gradient_boosting": 1.799426443675311,
+    "metric": "RMSE"
+   },
+   "selected_model": "hist_gradient_boosting",
+   "test_metrics": {
+    "baseline_mean": {
+     "MAE": 1.342852807241341,
+     "RMSE": 1.7646065475357062,
+     "R2": -0.00012934235981143516
+    },
+    "linear": {
+     "MAE": 1.315804902643623,
+     "RMSE": 1.741693512548551,
+     "R2": 0.02567495831911626
+    },
+    "hist_gradient_boosting": {
+     "MAE": 1.3138662691900584,
+     "RMSE": 1.7332942828935685,
+     "R2": 0.03504956673698434
+    }
+   },
+   "fit_seconds": 11.4,
+   "cv_oof_metrics": {
+    "MAE": 1.2936833491703024,
+    "RMSE": 1.7102220335437237,
+    "R2": 0.03546447232976191
+   },
+   "global_importance": [
+    {
+     "feature": "striker_runs_before",
+     "importance": 0.026999,
+     "std": 0.001534
+    },
+    {
+     "feature": "striker_balls_before",
+     "importance": 0.026578,
+     "std": 0.00261
+    },
+    {
+     "feature": "score_before",
+     "importance": 0.026339,
+     "std": 0.003901
+    },
+    {
+     "feature": "wkts_rem",
+     "importance": 0.015716,
+     "std": 0.003005
+    },
+    {
+     "feature": "balls_rem",
+     "importance": 0.013306,
+     "std": 0.00055
+    },
+    {
+     "feature": "venue_avg_first",
+     "importance": 0.00815,
+     "std": 0.000951
+    },
+    {
+     "feature": "rrr",
+     "importance": 0.00667,
+     "std": 0.002418
+    },
+    {
+     "feature": "is_pace",
+     "importance": 0.004259,
+     "std": 0.000694
+    },
+    {
+     "feature": "striker_order",
+     "importance": 0.002621,
+     "std": 0.001028
+    },
+    {
+     "feature": "crr",
+     "importance": 0.001911,
+     "std": 0.001382
+    },
+    {
+     "feature": "is_ipl",
+     "importance": 0.001356,
+     "std": 8.2e-05
+    },
+    {
+     "feature": "ball_in_over",
+     "importance": 0.001304,
+     "std": 0.000318
+    },
+    {
+     "feature": "elo_diff",
+     "importance": 0.000722,
+     "std": 0.000603
+    },
+    {
+     "feature": "bat_elo",
+     "importance": 0.000722,
+     "std": 0.000129
+    },
+    {
+     "feature": "target_runs_req",
+     "importance": 0.000722,
+     "std": 0.000177
+    },
+    {
+     "feature": "rrr_minus_crr",
+     "importance": 0.000529,
+     "std": 0.000287
+    },
+    {
+     "feature": "over_idx",
+     "importance": 0.000244,
+     "std": 9.4e-05
+    },
+    {
+     "feature": "is_t20i",
+     "importance": 0.000128,
+     "std": 5.8e-05
+    },
+    {
+     "feature": "innings",
+     "importance": 0.0,
+     "std": 0.0
+    },
+    {
+     "feature": "bowl_elo",
+     "importance": 0.0,
+     "std": 0.0
+    },
+    {
+     "feature": "is_left",
+     "importance": 0.0,
+     "std": 0.0
+    }
+   ],
+   "deployed_family": "hist_gradient_boosting"
+  },
+  "x_out": {
+   "task": "x_out",
+   "kind": "clf",
+   "n_train": 110680,
+   "n_valid": 23084,
+   "n_test": 50787,
+   "features": [
+    "innings",
+    "balls_rem",
+    "wkts_rem",
+    "score_before",
+    "crr",
+    "target_runs_req",
+    "rrr",
+    "rrr_minus_crr",
+    "over_idx",
+    "ball_in_over",
+    "bat_elo",
+    "bowl_elo",
+    "elo_diff",
+    "venue_avg_first",
+    "is_ipl",
+    "is_t20i",
+    "striker_order",
+    "striker_balls_before",
+    "striker_runs_before",
+    "is_left",
+    "is_pace"
+   ],
+   "candidates": {
+    "hgb_0": {
+     "params": {
+      "learning_rate": 0.05,
+      "max_iter": 150,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 200,
+      "l2_regularization": 1.0
+     },
+     "valid_LogLoss": 0.20500266351218502
+    },
+    "hgb_1": {
+     "params": {
+      "learning_rate": 0.05,
+      "max_iter": 250,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 400,
+      "l2_regularization": 5.0
+     },
+     "valid_LogLoss": 0.2049766471078199
+    },
+    "hgb_2": {
+     "params": {
+      "learning_rate": 0.03,
+      "max_iter": 300,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 400,
+      "l2_regularization": 10.0
+     },
+     "valid_LogLoss": 0.20506225437077547
+    },
+    "hgb_3": {
+     "params": {
+      "learning_rate": 0.05,
+      "max_iter": 120,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 300,
+      "l2_regularization": 1.0
+     },
+     "valid_LogLoss": 0.2049099061162694
+    }
+   },
+   "selected_params": {
+    "learning_rate": 0.05,
+    "max_iter": 120,
+    "max_leaf_nodes": 7,
+    "min_samples_leaf": 300,
+    "l2_regularization": 1.0
+   },
+   "valid_selection": {
+    "linear": 0.20615248218576274,
+    "hist_gradient_boosting": 0.2049099061162694,
+    "metric": "LogLoss"
+   },
+   "selected_model": "hist_gradient_boosting",
+   "test_metrics": {
+    "baseline_mean": {
+     "ROC_AUC": 0.5,
+     "PR_AUC": 0.05562447082914919,
+     "LogLoss": 0.21479361982014275,
+     "Brier": 0.052534419745298024,
+     "Precision@prev": 0.05562447082914919,
+     "Recall@prev": 1.0,
+     "F1@prev": 0.10538685368947251,
+     "ECE": 0.0020000000000000018,
+     "base_rate": 0.05562447082914919,
+     "n": 50787
+    },
+    "linear": {
+     "ROC_AUC": 0.5821715126244856,
+     "PR_AUC": 0.07751321030413641,
+     "LogLoss": 0.21241762334109252,
+     "Brier": 0.05225600427322515,
+     "Precision@prev": 0.10123893805309735,
+     "Recall@prev": 0.10123893805309735,
+     "F1@prev": 0.10123893805309735,
+     "ECE": 0.00399915588634887,
+     "base_rate": 0.05562447082914919,
+     "n": 50787
+    },
+    "hist_gradient_boosting": {
+     "ROC_AUC": 0.5973106179560294,
+     "PR_AUC": 0.08345967048909814,
+     "LogLoss": 0.2112829676873607,
+     "Brier": 0.05211412451999863,
+     "Precision@prev": 0.11677282377919321,
+     "Recall@prev": 0.1168141592920354,
+     "F1@prev": 0.11679348787825164,
+     "ECE": 0.002253649162187173,
+     "base_rate": 0.05562447082914919,
+     "n": 50787
+    }
+   },
+   "test_calibration": [
+    {
+     "mean_pred": 0.03343,
+     "obs_rate": 0.03386,
+     "n": 5079
+    },
+    {
+     "mean_pred": 0.03965,
+     "obs_rate": 0.03603,
+     "n": 5079
+    },
+    {
+     "mean_pred": 0.04273,
+     "obs_rate": 0.04269,
+     "n": 5083
+    },
+    {
+     "mean_pred": 0.04505,
+     "obs_rate": 0.04888,
+     "n": 5074
+    },
+    {
+     "mean_pred": 0.04734,
+     "obs_rate": 0.04843,
+     "n": 5079
+    },
+    {
+     "mean_pred": 0.05025,
+     "obs_rate": 0.05278,
+     "n": 5078
+    },
+    {
+     "mean_pred": 0.05463,
+     "obs_rate": 0.05926,
+     "n": 5079
+    },
+    {
+     "mean_pred": 0.06135,
+     "obs_rate": 0.05829,
+     "n": 5078
+    },
+    {
+     "mean_pred": 0.0739,
+     "obs_rate": 0.07246,
+     "n": 5079
+    },
+    {
+     "mean_pred": 0.10543,
+     "obs_rate": 0.10356,
+     "n": 5079
+    }
+   ],
+   "class_imbalance_comparison": {
+    "unweighted": {
+     "ROC_AUC": 0.5973106179560294,
+     "PR_AUC": 0.08345967048909814,
+     "LogLoss": 0.2112829676873607,
+     "Brier": 0.05211412451999863,
+     "Precision@prev": 0.11677282377919321,
+     "Recall@prev": 0.1168141592920354,
+     "F1@prev": 0.11679348787825164,
+     "ECE": 0.002253649162187173,
+     "base_rate": 0.05562447082914919,
+     "n": 50787
+    },
+    "class_weight_balanced": {
+     "ROC_AUC": 0.5972368870193328,
+     "PR_AUC": 0.08407544087433819,
+     "LogLoss": 0.6801896878595513,
+     "Brier": 0.24310382959945046,
+     "Precision@prev": 0.1178343949044586,
+     "Recall@prev": 0.11787610619469027,
+     "F1@prev": 0.11785524685896301,
+     "ECE": 0.4328191781361372,
+     "base_rate": 0.05562447082914919,
+     "n": 50787
+    }
+   },
+   "fit_seconds": 18.1,
+   "cv_oof_metrics": {
+    "ROC_AUC": 0.6007000586031189,
+    "PR_AUC": 0.08226611169111575,
+    "LogLoss": 0.20691764888098213,
+    "Brier": 0.050799910956709604,
+    "Precision@prev": 0.11833550065019506,
+    "Recall@prev": 0.11833550065019506,
+    "F1@prev": 0.11833550065019506,
+    "ECE": 0.0015990364181174847,
+    "base_rate": 0.054169308212905914,
+    "n": 184551
+   },
+   "global_importance": [
+    {
+     "feature": "balls_rem",
+     "importance": 0.003645,
+     "std": 0.000215
+    },
+    {
+     "feature": "rrr",
+     "importance": 0.000907,
+     "std": 0.000193
+    },
+    {
+     "feature": "striker_balls_before",
+     "importance": 0.000567,
+     "std": 0.000252
+    },
+    {
+     "feature": "rrr_minus_crr",
+     "importance": 0.000294,
+     "std": 0.000122
+    },
+    {
+     "feature": "score_before",
+     "importance": 0.000236,
+     "std": 3.4e-05
+    },
+    {
+     "feature": "is_ipl",
+     "importance": 0.000189,
+     "std": 5.4e-05
+    },
+    {
+     "feature": "bat_elo",
+     "importance": 0.000147,
+     "std": 2.5e-05
+    },
+    {
+     "feature": "ball_in_over",
+     "importance": 0.000142,
+     "std": 9e-06
+    },
+    {
+     "feature": "bowl_elo",
+     "importance": 0.000139,
+     "std": 2e-06
+    },
+    {
+     "feature": "crr",
+     "importance": 9.8e-05,
+     "std": 1.2e-05
+    },
+    {
+     "feature": "striker_runs_before",
+     "importance": 7.5e-05,
+     "std": 6.2e-05
+    },
+    {
+     "feature": "striker_order",
+     "importance": 6.6e-05,
+     "std": 5.4e-05
+    },
+    {
+     "feature": "target_runs_req",
+     "importance": 4.7e-05,
+     "std": 2.3e-05
+    },
+    {
+     "feature": "elo_diff",
+     "importance": 4.2e-05,
+     "std": 1.3e-05
+    },
+    {
+     "feature": "venue_avg_first",
+     "importance": 1.9e-05,
+     "std": 1.1e-05
+    },
+    {
+     "feature": "is_t20i",
+     "importance": 1.3e-05,
+     "std": 3.1e-05
+    },
+    {
+     "feature": "over_idx",
+     "importance": 1.1e-05,
+     "std": 7e-06
+    },
+    {
+     "feature": "is_pace",
+     "importance": 5e-06,
+     "std": 8e-06
+    },
+    {
+     "feature": "innings",
+     "importance": 0.0,
+     "std": 0.0
+    },
+    {
+     "feature": "is_left",
+     "importance": 0.0,
+     "std": 0.0
+    },
+    {
+     "feature": "wkts_rem",
+     "importance": -1.1e-05,
+     "std": 1e-05
+    }
+   ],
+   "deployed_family": "hist_gradient_boosting"
+  },
+  "x_charged": {
+   "task": "x_charged",
+   "kind": "reg",
+   "n_train": 114977,
+   "n_valid": 24057,
+   "n_test": 52869,
+   "features": [
+    "innings",
+    "balls_rem",
+    "wkts_rem",
+    "score_before",
+    "crr",
+    "target_runs_req",
+    "rrr",
+    "rrr_minus_crr",
+    "over_idx",
+    "ball_in_over",
+    "bat_elo",
+    "bowl_elo",
+    "elo_diff",
+    "venue_avg_first",
+    "is_ipl",
+    "is_t20i",
+    "striker_order",
+    "striker_balls_before",
+    "striker_runs_before",
+    "is_left",
+    "is_pace"
+   ],
+   "candidates": {
+    "hgb_0": {
+     "params": {
+      "learning_rate": 0.05,
+      "max_iter": 150,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 200,
+      "l2_regularization": 1.0
+     },
+     "valid_RMSE": 1.7741813472525718
+    },
+    "hgb_1": {
+     "params": {
+      "learning_rate": 0.05,
+      "max_iter": 250,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 400,
+      "l2_regularization": 5.0
+     },
+     "valid_RMSE": 1.7736094143491978
+    },
+    "hgb_2": {
+     "params": {
+      "learning_rate": 0.03,
+      "max_iter": 300,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 400,
+      "l2_regularization": 10.0
+     },
+     "valid_RMSE": 1.7749498783179012
+    },
+    "hgb_3": {
+     "params": {
+      "learning_rate": 0.05,
+      "max_iter": 120,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 300,
+      "l2_regularization": 1.0
+     },
+     "valid_RMSE": 1.7736112184151098
+    }
+   },
+   "selected_params": {
+    "learning_rate": 0.05,
+    "max_iter": 250,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 400,
+    "l2_regularization": 5.0
+   },
+   "valid_selection": {
+    "linear": 1.783438178383605,
+    "hist_gradient_boosting": 1.7736094143491978,
+    "metric": "RMSE"
+   },
+   "selected_model": "hist_gradient_boosting",
+   "test_metrics": {
+    "baseline_mean": {
+     "MAE": 1.308641568059821,
+     "RMSE": 1.7379601316018853,
+     "R2": -0.00011947341061802064
+    },
+    "linear": {
+     "MAE": 1.2852782085147167,
+     "RMSE": 1.7172976253724517,
+     "R2": 0.023519886478115204
+    },
+    "hist_gradient_boosting": {
+     "MAE": 1.281778086492237,
+     "RMSE": 1.70865884566247,
+     "R2": 0.033319444859207015
+    }
+   },
+   "fit_seconds": 9.4,
+   "cv_oof_metrics": {
+    "MAE": 1.2637384508711007,
+    "RMSE": 1.6869266953824351,
+    "R2": 0.033749424841144404
+   },
+   "global_importance": [
+    {
+     "feature": "striker_runs_before",
+     "importance": 0.032369,
+     "std": 0.001874
+    },
+    {
+     "feature": "score_before",
+     "importance": 0.027231,
+     "std": 0.001942
+    },
+    {
+     "feature": "striker_balls_before",
+     "importance": 0.027137,
+     "std": 0.001162
+    },
+    {
+     "feature": "wkts_rem",
+     "importance": 0.025904,
+     "std": 0.001273
+    },
+    {
+     "feature": "balls_rem",
+     "importance": 0.015874,
+     "std": 0.001032
+    },
+    {
+     "feature": "rrr",
+     "importance": 0.010705,
+     "std": 0.000939
+    },
+    {
+     "feature": "striker_order",
+     "importance": 0.00833,
+     "std": 0.000931
+    },
+    {
+     "feature": "venue_avg_first",
+     "importance": 0.007226,
+     "std": 0.000872
+    },
+    {
+     "feature": "crr",
+     "importance": 0.004796,
+     "std": 0.000452
+    },
+    {
+     "feature": "bat_elo",
+     "importance": 0.004469,
+     "std": 0.000749
+    },
+    {
+     "feature": "rrr_minus_crr",
+     "importance": 0.003187,
+     "std": 0.000512
+    },
+    {
+     "feature": "ball_in_over",
+     "importance": 0.003178,
+     "std": 0.000369
+    },
+    {
+     "feature": "elo_diff",
+     "importance": 0.002811,
+     "std": 0.000581
+    },
+    {
+     "feature": "is_pace",
+     "importance": 0.002624,
+     "std": 0.00074
+    },
+    {
+     "feature": "bowl_elo",
+     "importance": 0.001901,
+     "std": 9.9e-05
+    },
+    {
+     "feature": "target_runs_req",
+     "importance": 0.001519,
+     "std": 0.000261
+    },
+    {
+     "feature": "is_ipl",
+     "importance": 0.000453,
+     "std": 0.000125
+    },
+    {
+     "feature": "is_left",
+     "importance": 0.000354,
+     "std": 5.1e-05
+    },
+    {
+     "feature": "over_idx",
+     "importance": 0.000287,
+     "std": 0.000156
+    },
+    {
+     "feature": "is_t20i",
+     "importance": 1.2e-05,
+     "std": 4e-05
+    },
+    {
+     "feature": "innings",
+     "importance": 0.0,
+     "std": 0.0
+    }
+   ],
+   "deployed_family": "hist_gradient_boosting"
+  },
+  "x_bwk": {
+   "task": "x_bwk",
+   "kind": "clf",
+   "n_train": 114977,
+   "n_valid": 24057,
+   "n_test": 52869,
+   "features": [
+    "innings",
+    "balls_rem",
+    "wkts_rem",
+    "score_before",
+    "crr",
+    "target_runs_req",
+    "rrr",
+    "rrr_minus_crr",
+    "over_idx",
+    "ball_in_over",
+    "bat_elo",
+    "bowl_elo",
+    "elo_diff",
+    "venue_avg_first",
+    "is_ipl",
+    "is_t20i",
+    "striker_order",
+    "striker_balls_before",
+    "striker_runs_before",
+    "is_left",
+    "is_pace"
+   ],
+   "candidates": {
+    "hgb_0": {
+     "params": {
+      "learning_rate": 0.05,
+      "max_iter": 150,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 200,
+      "l2_regularization": 1.0
+     },
+     "valid_LogLoss": 0.196908571681255
+    },
+    "hgb_1": {
+     "params": {
+      "learning_rate": 0.05,
+      "max_iter": 250,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 400,
+      "l2_regularization": 5.0
+     },
+     "valid_LogLoss": 0.1969635493517407
+    },
+    "hgb_2": {
+     "params": {
+      "learning_rate": 0.03,
+      "max_iter": 300,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 400,
+      "l2_regularization": 10.0
+     },
+     "valid_LogLoss": 0.1970927447907938
+    },
+    "hgb_3": {
+     "params": {
+      "learning_rate": 0.05,
+      "max_iter": 120,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 300,
+      "l2_regularization": 1.0
+     },
+     "valid_LogLoss": 0.19690732663674862
+    }
+   },
+   "selected_params": {
+    "learning_rate": 0.05,
+    "max_iter": 120,
+    "max_leaf_nodes": 7,
+    "min_samples_leaf": 300,
+    "l2_regularization": 1.0
+   },
+   "valid_selection": {
+    "linear": 0.19779799864302114,
+    "hist_gradient_boosting": 0.19690732663674862,
+    "metric": "LogLoss"
+   },
+   "selected_model": "hist_gradient_boosting",
+   "test_metrics": {
+    "baseline_mean": {
+     "ROC_AUC": 0.5,
+     "PR_AUC": 0.051882955985549185,
+     "LogLoss": 0.20405367469386093,
+     "Brier": 0.04919410691973927,
+     "Precision@prev": 0.051882955985549185,
+     "Recall@prev": 1.0,
+     "F1@prev": 0.09864777386175645,
+     "ECE": 0.0017300000000000024,
+     "base_rate": 0.051882955985549185,
+     "n": 52869
+    },
+    "linear": {
+     "ROC_AUC": 0.5760865848102883,
+     "PR_AUC": 0.0697072416630482,
+     "LogLoss": 0.2022159921216311,
+     "Brier": 0.04899644505468456,
+     "Precision@prev": 0.08931826467371491,
+     "Recall@prev": 0.08931826467371491,
+     "F1@prev": 0.08931826467371491,
+     "ECE": 0.00413699691690783,
+     "base_rate": 0.051882955985549185,
+     "n": 52869
+    },
+    "hist_gradient_boosting": {
+     "ROC_AUC": 0.5898283827488959,
+     "PR_AUC": 0.07394811491066833,
+     "LogLoss": 0.20139000219401457,
+     "Brier": 0.04890687900117917,
+     "Precision@prev": 0.10363636363636364,
+     "Recall@prev": 0.10390083849799489,
+     "F1@prev": 0.10376843255051885,
+     "ECE": 0.0030354909304129087,
+     "base_rate": 0.051882955985549185,
+     "n": 52869
+    }
+   },
+   "test_calibration": [
+    {
+     "mean_pred": 0.03371,
+     "obs_rate": 0.03026,
+     "n": 5288
+    },
+    {
+     "mean_pred": 0.0403,
+     "obs_rate": 0.03495,
+     "n": 5294
+    },
+    {
+     "mean_pred": 0.04242,
+     "obs_rate": 0.04547,
+     "n": 5322
+    },
+    {
+     "mean_pred": 0.04359,
+     "obs_rate": 0.04374,
+     "n": 5258
+    },
+    {
+     "mean_pred": 0.04491,
+     "obs_rate": 0.04588,
+     "n": 5297
+    },
+    {
+     "mean_pred": 0.04665,
+     "obs_rate": 0.05128,
+     "n": 5265
+    },
+    {
+     "mean_pred": 0.04937,
+     "obs_rate": 0.04939,
+     "n": 5285
+    },
+    {
+     "mean_pred": 0.05478,
+     "obs_rate": 0.0594,
+     "n": 5286
+    },
+    {
+     "mean_pred": 0.0641,
+     "obs_rate": 0.06521,
+     "n": 5291
+    },
+    {
+     "mean_pred": 0.08632,
+     "obs_rate": 0.09332,
+     "n": 5283
+    }
+   ],
+   "class_imbalance_comparison": {
+    "unweighted": {
+     "ROC_AUC": 0.5898283827488959,
+     "PR_AUC": 0.07394811491066833,
+     "LogLoss": 0.20139000219401457,
+     "Brier": 0.04890687900117917,
+     "Precision@prev": 0.10363636363636364,
+     "Recall@prev": 0.10390083849799489,
+     "F1@prev": 0.10376843255051885,
+     "ECE": 0.0030354909304129087,
+     "base_rate": 0.051882955985549185,
+     "n": 52869
+    },
+    "class_weight_balanced": {
+     "ROC_AUC": 0.5904721887209525,
+     "PR_AUC": 0.07457258785874485,
+     "LogLoss": 0.6807687980344441,
+     "Brier": 0.24360819679013354,
+     "Precision@prev": 0.1009475218658892,
+     "Recall@prev": 0.1009843237331389,
+     "F1@prev": 0.10096591944596318,
+     "ECE": 0.4382219071667707,
+     "base_rate": 0.051882955985549185,
+     "n": 52869
+    }
+   },
+   "fit_seconds": 15.4,
+   "cv_oof_metrics": {
+    "ROC_AUC": 0.5929634120112424,
+    "PR_AUC": 0.0722441547233398,
+    "LogLoss": 0.1975959607288807,
+    "Brier": 0.04777395548803155,
+    "Precision@prev": 0.09870317002881844,
+    "Recall@prev": 0.09870317002881844,
+    "F1@prev": 0.09870317002881844,
+    "ECE": 0.0016030160028764524,
+    "base_rate": 0.05062974523587437,
+    "n": 191903
+   },
+   "global_importance": [
+    {
+     "feature": "balls_rem",
+     "importance": 0.003901,
+     "std": 0.00035
+    },
+    {
+     "feature": "striker_balls_before",
+     "importance": 0.001005,
+     "std": 2.4e-05
+    },
+    {
+     "feature": "rrr",
+     "importance": 0.000585,
+     "std": 0.000146
+    },
+    {
+     "feature": "rrr_minus_crr",
+     "importance": 0.000471,
+     "std": 3.2e-05
+    },
+    {
+     "feature": "striker_order",
+     "importance": 0.000411,
+     "std": 6.3e-05
+    },
+    {
+     "feature": "is_pace",
+     "importance": 0.000311,
+     "std": 1.6e-05
+    },
+    {
+     "feature": "score_before",
+     "importance": 0.000307,
+     "std": 4e-05
+    },
+    {
+     "feature": "bat_elo",
+     "importance": 0.000273,
+     "std": 1.8e-05
+    },
+    {
+     "feature": "striker_runs_before",
+     "importance": 0.000268,
+     "std": 7.1e-05
+    },
+    {
+     "feature": "ball_in_over",
+     "importance": 0.000176,
+     "std": 2.6e-05
+    },
+    {
+     "feature": "crr",
+     "importance": 0.00012,
+     "std": 1.7e-05
+    },
+    {
+     "feature": "elo_diff",
+     "importance": 0.000117,
+     "std": 1.7e-05
+    },
+    {
+     "feature": "is_ipl",
+     "importance": 0.000117,
+     "std": 0.000126
+    },
+    {
+     "feature": "bowl_elo",
+     "importance": 0.000111,
+     "std": 2e-05
+    },
+    {
+     "feature": "venue_avg_first",
+     "importance": 0.000109,
+     "std": 1.7e-05
+    },
+    {
+     "feature": "wkts_rem",
+     "importance": 0.000107,
+     "std": 1.6e-05
+    },
+    {
+     "feature": "target_runs_req",
+     "importance": 8.3e-05,
+     "std": 4.4e-05
+    },
+    {
+     "feature": "is_left",
+     "importance": 2.3e-05,
+     "std": 5e-06
+    },
+    {
+     "feature": "is_t20i",
+     "importance": 1.9e-05,
+     "std": 2.2e-05
+    },
+    {
+     "feature": "over_idx",
+     "importance": 1.3e-05,
+     "std": 4e-06
+    },
+    {
+     "feature": "innings",
+     "importance": 0.0,
+     "std": 0.0
+    }
+   ],
+   "deployed_family": "hist_gradient_boosting"
+  },
+  "wp": {
+   "task": "wp",
+   "kind": "clf",
+   "n_train": 113971,
+   "n_valid": 23805,
+   "n_test": 51857,
+   "features": [
+    "innings",
+    "balls_rem",
+    "wkts_rem",
+    "score_before",
+    "target_runs_req",
+    "rrr",
+    "elo_diff",
+    "venue_avg_first",
+    "is_ipl",
+    "is_t20i"
+   ],
+   "candidates": {
+    "hgb_0": {
+     "params": {
+      "learning_rate": 0.05,
+      "max_iter": 100,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 800,
+      "l2_regularization": 10.0
+     },
+     "valid_LogLoss": 0.5261523683695717
+    },
+    "hgb_1": {
+     "params": {
+      "learning_rate": 0.05,
+      "max_iter": 200,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 1500,
+      "l2_regularization": 20.0
+     },
+     "valid_LogLoss": 0.5238983493120482
+    },
+    "hgb_2": {
+     "params": {
+      "learning_rate": 0.03,
+      "max_iter": 200,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 1000,
+      "l2_regularization": 20.0
+     },
+     "valid_LogLoss": 0.5381093229879176
+    },
+    "hgb_3": {
+     "params": {
+      "learning_rate": 0.05,
+      "max_iter": 150,
+      "max_leaf_nodes": 5,
+      "min_samples_leaf": 2000,
+      "l2_regularization": 30.0
+     },
+     "valid_LogLoss": 0.5079076436674761
+    }
+   },
+   "selected_params": {
+    "learning_rate": 0.05,
+    "max_iter": 150,
+    "max_leaf_nodes": 5,
+    "min_samples_leaf": 2000,
+    "l2_regularization": 30.0
+   },
+   "valid_selection": {
+    "linear": 0.5244962570548146,
+    "hist_gradient_boosting": 0.5079076436674761,
+    "metric": "LogLoss"
+   },
+   "selected_model": "hist_gradient_boosting",
+   "test_metrics": {
+    "baseline_mean": {
+     "ROC_AUC": 0.5,
+     "PR_AUC": 0.4876872939043909,
+     "LogLoss": 0.6928730397323184,
+     "Brier": 0.24986293931011916,
+     "Precision@prev": 0.4876872939043909,
+     "Recall@prev": 1.0,
+     "F1@prev": 0.6556314568291702,
+     "ECE": 0.00380999999999998,
+     "base_rate": 0.4876872939043909,
+     "n": 51857
+    },
+    "linear": {
+     "ROC_AUC": 0.8273663594672038,
+     "PR_AUC": 0.8295426149824731,
+     "LogLoss": 0.495925541067597,
+     "Brier": 0.1688695984550392,
+     "Precision@prev": 0.7265717674970344,
+     "Recall@prev": 0.7265717674970344,
+     "F1@prev": 0.7265717674970344,
+     "ECE": 0.01927937616908037,
+     "base_rate": 0.4876872939043909,
+     "n": 51857
+    },
+    "hist_gradient_boosting": {
+     "ROC_AUC": 0.8289261765314053,
+     "PR_AUC": 0.8323349985626242,
+     "LogLoss": 0.4960260815742242,
+     "Brier": 0.16814882107679877,
+     "Precision@prev": 0.7234126670356607,
+     "Recall@prev": 0.7235270858046658,
+     "F1@prev": 0.7234698718962518,
+     "ECE": 0.02788647954953046,
+     "base_rate": 0.4876872939043909,
+     "n": 51857
+    }
+   },
+   "test_calibration": [
+    {
+     "mean_pred": 0.05229,
+     "obs_rate": 0.03432,
+     "n": 5186
+    },
+    {
+     "mean_pred": 0.15668,
+     "obs_rate": 0.11608,
+     "n": 5186
+    },
+    {
+     "mean_pred": 0.25673,
+     "obs_rate": 0.28282,
+     "n": 5187
+    },
+    {
+     "mean_pred": 0.34337,
+     "obs_rate": 0.37018,
+     "n": 5184
+    },
+    {
+     "mean_pred": 0.42622,
+     "obs_rate": 0.46676,
+     "n": 5189
+    },
+    {
+     "mean_pred": 0.51943,
+     "obs_rate": 0.53107,
+     "n": 5182
+    },
+    {
+     "mean_pred": 0.60978,
+     "obs_rate": 0.57729,
+     "n": 5188
+    },
+    {
+     "mean_pred": 0.7162,
+     "obs_rate": 0.67207,
+     "n": 5184
+    },
+    {
+     "mean_pred": 0.84369,
+     "obs_rate": 0.83629,
+     "n": 5186
+    },
+    {
+     "mean_pred": 0.95898,
+     "obs_rate": 0.99016,
+     "n": 5185
+    }
+   ],
+   "class_imbalance_comparison": {
+    "unweighted": {
+     "ROC_AUC": 0.8289261765314053,
+     "PR_AUC": 0.8323349985626242,
+     "LogLoss": 0.4960260815742242,
+     "Brier": 0.16814882107679877,
+     "Precision@prev": 0.7234126670356607,
+     "Recall@prev": 0.7235270858046658,
+     "F1@prev": 0.7234698718962518,
+     "ECE": 0.02788647954953046,
+     "base_rate": 0.4876872939043909,
+     "n": 51857
+    },
+    "class_weight_balanced": {
+     "ROC_AUC": 0.8313937375638959,
+     "PR_AUC": 0.8344215654506064,
+     "LogLoss": 0.4937310198571394,
+     "Brier": 0.16712061732165603,
+     "Precision@prev": 0.7262949782522736,
+     "Recall@prev": 0.7262949782522736,
+     "F1@prev": 0.7262949782522736,
+     "ECE": 0.027806072082843195,
+     "base_rate": 0.4876872939043909,
+     "n": 51857
+    }
+   },
+   "fit_seconds": 14.4,
+   "cv_oof_metrics": {
+    "ROC_AUC": 0.8063423716778247,
+    "PR_AUC": 0.8017437016825992,
+    "LogLoss": 0.528494386274543,
+    "Brier": 0.17898971576012349,
+    "Precision@prev": 0.716968960660567,
+    "Recall@prev": 0.7169997957143011,
+    "F1@prev": 0.7169843778559064,
+    "ECE": 0.01258518875934041,
+    "base_rate": 0.49045788443994454,
+    "n": 189633
+   },
+   "global_importance": [
+    {
+     "feature": "innings",
+     "importance": 0.40308,
+     "std": 0.002551
+    },
+    {
+     "feature": "rrr",
+     "importance": 0.217093,
+     "std": 0.001463
+    },
+    {
+     "feature": "target_runs_req",
+     "importance": 0.105217,
+     "std": 0.001457
+    },
+    {
+     "feature": "wkts_rem",
+     "importance": 0.089442,
+     "std": 0.000869
+    },
+    {
+     "feature": "score_before",
+     "importance": 0.042058,
+     "std": 0.000517
+    },
+    {
+     "feature": "elo_diff",
+     "importance": 0.038473,
+     "std": 6.4e-05
+    },
+    {
+     "feature": "venue_avg_first",
+     "importance": 0.032327,
+     "std": 0.000752
+    },
+    {
+     "feature": "is_ipl",
+     "importance": 0.004778,
+     "std": 0.000508
+    },
+    {
+     "feature": "is_t20i",
+     "importance": 0.001524,
+     "std": 4.4e-05
+    },
+    {
+     "feature": "balls_rem",
+     "importance": 0.000282,
+     "std": 2.6e-05
+    }
+   ],
+   "deployed_family": "hist_gradient_boosting"
+  },
+  "lev": {
+   "task": "lev",
+   "kind": "reg",
+   "n_train": 114499,
+   "n_valid": 23956,
+   "n_test": 52645,
+   "features": [
+    "innings",
+    "balls_rem",
+    "wkts_rem",
+    "score_before",
+    "target_runs_req",
+    "rrr",
+    "elo_diff",
+    "venue_avg_first",
+    "is_ipl",
+    "is_t20i",
+    "over_idx",
+    "wp_pre"
+   ],
+   "candidates": {
+    "hgb_0": {
+     "params": {
+      "learning_rate": 0.05,
+      "max_iter": 150,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 200,
+      "l2_regularization": 1.0
+     },
+     "valid_RMSE": 0.02289906083649309
+    },
+    "hgb_1": {
+     "params": {
+      "learning_rate": 0.05,
+      "max_iter": 250,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 400,
+      "l2_regularization": 5.0
+     },
+     "valid_RMSE": 0.022894109426316086
+    },
+    "hgb_2": {
+     "params": {
+      "learning_rate": 0.03,
+      "max_iter": 300,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 400,
+      "l2_regularization": 10.0
+     },
+     "valid_RMSE": 0.022829015806824313
+    },
+    "hgb_3": {
+     "params": {
+      "learning_rate": 0.05,
+      "max_iter": 120,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 300,
+      "l2_regularization": 1.0
+     },
+     "valid_RMSE": 0.023150319320628394
+    }
+   },
+   "selected_params": {
+    "learning_rate": 0.03,
+    "max_iter": 300,
+    "max_leaf_nodes": 31,
+    "min_samples_leaf": 400,
+    "l2_regularization": 10.0
+   },
+   "valid_selection": {
+    "linear": 0.025953805017384642,
+    "hist_gradient_boosting": 0.022829015806824313,
+    "metric": "RMSE"
+   },
+   "selected_model": "hist_gradient_boosting",
+   "test_metrics": {
+    "baseline_mean": {
+     "MAE": 0.01430425316985181,
+     "RMSE": 0.026115147113234524,
+     "R2": -0.0025743418559740494
+    },
+    "linear": {
+     "MAE": 0.013666426162760328,
+     "RMSE": 0.025664565196811397,
+     "R2": 0.031723360213828156
+    },
+    "hist_gradient_boosting": {
+     "MAE": 0.01097081189779783,
+     "RMSE": 0.022109112662117656,
+     "R2": 0.28142143531803043
+    }
+   },
+   "fit_seconds": 12.5,
+   "cv_oof_metrics": {
+    "MAE": 0.011797997573771798,
+    "RMSE": 0.023680029894863987,
+    "R2": 0.2787238965542299
+   },
+   "global_importance": [
+    {
+     "feature": "rrr",
+     "importance": 0.005582,
+     "std": 6.4e-05
+    },
+    {
+     "feature": "target_runs_req",
+     "importance": 0.004987,
+     "std": 2.2e-05
+    },
+    {
+     "feature": "wp_pre",
+     "importance": 0.000218,
+     "std": 5e-06
+    },
+    {
+     "feature": "innings",
+     "importance": 0.00011,
+     "std": 3e-06
+    },
+    {
+     "feature": "balls_rem",
+     "importance": 8.4e-05,
+     "std": 9e-06
+    },
+    {
+     "feature": "score_before",
+     "importance": 1.4e-05,
+     "std": 1e-06
+    },
+    {
+     "feature": "wkts_rem",
+     "importance": 8e-06,
+     "std": 1e-06
+    },
+    {
+     "feature": "venue_avg_first",
+     "importance": 3e-06,
+     "std": 0.0
+    },
+    {
+     "feature": "elo_diff",
+     "importance": 3e-06,
+     "std": 1e-06
+    },
+    {
+     "feature": "is_ipl",
+     "importance": 1e-06,
+     "std": 0.0
+    },
+    {
+     "feature": "over_idx",
+     "importance": 0.0,
+     "std": 0.0
+    },
+    {
+     "feature": "is_t20i",
+     "importance": -0.0,
+     "std": 0.0
+    }
+   ],
+   "deployed_family": "hist_gradient_boosting"
+  }
+ }
+}

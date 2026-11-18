@@ -1,0 +1,23 @@
+[
+ {
+  "cutoff": "2025-03-31",
+  "n_players": 59,
+  "note": "early-period shrinkage found no detectable between-player variance (tau=0); no prediction possible"
+ },
+ {
+  "cutoff": "2025-07-31",
+  "n_players": 53,
+  "spearman_with_late_pressure_value": {
+   "PRI composite (early)": 0.2646347363328495,
+   "pressure LEVEL shrunk (early)": 0.2646347363328495,
+   "pressure DELTA shrunk (early)": null,
+   "pressure CONSISTENCY shrunk (early)": null,
+   "conventional all-ball value (early)": 0.002580228995323335,
+   "pressure level raw (early)": 0.1195774875020158
+  },
+  "weighted_R2_conventional_only": 0.0001563509496850246,
+  "weighted_R2_conventional_plus_PRI": 0.06936218504527658,
+  "late_pressure_value_per100_early_top10_mean": 17.671869727137526,
+  "late_pressure_value_per100_all_eligible_mean": 5.491529934619647
+ }
+]

@@ -1,0 +1,11 @@
+/* PLAYBOOK 27 design tokens. Text colours are contrast-tested in tests/contrast.test.js (WCAG 2.1 AA). */
+:root{
+  --pink:#EA1A85; --pink-ink:#B30D66; --pink-soft:#FCE8F2; --navy:#0A1F44; --navy-2:#243764; --white:#FFFFFF;
+  --bg:#FAF9FB; --grey:#E8EAF0; --grey-2:#C9CEDB; --text:#20243A; --muted:#565C79;
+  --ok:#0B6B4A; --warn:#8A5300; --bad:#A3122A; --info:#1F4E9C;
+  --font-head:'Space Grotesk','Inter','Segoe UI',system-ui,-apple-system,Arial,sans-serif; --font-body:'Inter','Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+  --fs-xs:.75rem; --fs-sm:.875rem; --fs-md:1rem; --fs-lg:1.25rem; --fs-xl:1.75rem; --fs-2xl:2.25rem;
+  --sp-1:.25rem; --sp-2:.5rem; --sp-3:.75rem; --sp-4:1rem; --sp-5:1.5rem; --sp-6:2rem; --sp-7:3rem;
+  --radius:12px; --radius-sm:8px; --border:1px solid var(--grey); --shadow:0 1px 2px rgba(10,31,68,.06),0 4px 14px rgba(10,31,68,.06); --shadow-lg:0 12px 40px rgba(10,31,68,.18);
+  --series-1:#EA1A85; --series-2:#0A1F44; --series-3:#5B6BA8; --series-4:#F29BC8; --series-5:#7B8299;
+}

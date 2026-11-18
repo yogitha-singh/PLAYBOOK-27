@@ -1,0 +1,113 @@
+{
+ "V": {
+  "innings1": {
+   "wp_per_run": 0.0022660557835450846,
+   "wp_per_wicket": -0.05821044372793526,
+   "V_runs_per_wicket": 25.688001218076426
+  },
+  "innings2": {
+   "wp_per_run": 0.009059387278369345,
+   "wp_per_wicket": -0.04971964908325174,
+   "V_runs_per_wicket": 5.488191149744189
+  },
+  "V": 15.588096183910308
+ },
+ "pressure": {
+  "cuts": [
+   0.5,
+   0.8,
+   0.95
+  ],
+  "by_innings": true,
+  "LI_thresholds": {
+   "innings_1": {
+    "P50": 0.5518841075189002,
+    "P80": 0.8005307812526052,
+    "P95": 1.1962492785240662
+   },
+   "innings_2": {
+    "P50": 1.0243685148351012,
+    "P80": 2.0419169666150743,
+    "P95": 4.308727978886805
+   }
+  },
+  "pressure_levels": [
+   "High",
+   "Critical"
+  ]
+ },
+ "bat": {
+  "role": "bat",
+  "min_pressure_deliveries": 128,
+  "min_appearances": 6,
+  "n_eligible": 94,
+  "V_runs_per_wicket": 15.588096183910308,
+  "tau": {
+   "level": 0.07723321131161508,
+   "delta": 0.0,
+   "cons": 0.0779074420428415
+  },
+  "eb": {
+   "runs_level": {
+    "mu": 0.012749789216726011,
+    "tau2": 0.005964968929504588
+   },
+   "runs_delta": {
+    "mu": 0.01164332386307481,
+    "tau2": 0.0
+   },
+   "runs_consistency": {
+    "mu": 0.4817761042044874,
+    "tau2": 0.006069569525658708
+   },
+   "wicket_level": {
+    "mu": 0.0017968624449537039,
+    "tau2": 0.0
+   },
+   "wicket_delta": {
+    "mu": -0.001569280652957669,
+    "tau2": 0.0
+   }
+  },
+  "ball_variance_runs_stream": 3.047622992022062,
+  "baseline_ball_variance_runs_stream": 2.894544509228768,
+  "n_players_with_pressure_deliveries": 730
+ },
+ "bowl": {
+  "role": "bowl",
+  "min_pressure_deliveries": 126,
+  "min_appearances": 6,
+  "n_eligible": 100,
+  "V_runs_per_wicket": 15.588096183910308,
+  "tau": {
+   "level": 0.07643550035847389,
+   "delta": 0.0,
+   "cons": 0.03678237458924085
+  },
+  "eb": {
+   "runs_level": {
+    "mu": -0.001856635892898049,
+    "tau2": 0.005842385715050263
+   },
+   "runs_delta": {
+    "mu": -0.0011369498582522418,
+    "tau2": 0.0
+   },
+   "runs_consistency": {
+    "mu": 0.5604856462720003,
+    "tau2": 0.001352943080423231
+   },
+   "wicket_level": {
+    "mu": 0.0009153408301072525,
+    "tau2": 0.0
+   },
+   "wicket_delta": {
+    "mu": 0.0010808700552636826,
+    "tau2": 0.0
+   }
+  },
+  "ball_variance_runs_stream": 2.9381706132627854,
+  "baseline_ball_variance_runs_stream": 2.8226434987528517,
+  "n_players_with_pressure_deliveries": 553
+ }
+}

@@ -1,0 +1,11 @@
+services:
+  app:
+    build: { context: ., dockerfile: backend/Dockerfile }
+    ports: ["8000:8000"]
+    environment:
+      PLAYBOOK_ENV: production
+      PLAYBOOK_API_KEY: ${PLAYBOOK_API_KEY:?set PLAYBOOK_API_KEY in .env}
+      PLAYBOOK_CORS_ORIGINS: ${PLAYBOOK_CORS_ORIGINS:-}
+      PLAYBOOK_DB_PATH: /app/data/app.sqlite3
+    volumes: ["playbook_db:/app/data"]
+volumes: { playbook_db: {} }

@@ -1,0 +1,127 @@
+{
+ "summary": {
+  "PASS": 12,
+  "WARN": 7,
+  "FAIL": 0
+ },
+ "checks": [
+  {
+   "check": "duplicate full rows",
+   "status": "PASS",
+   "value": 0,
+   "detail": ""
+  },
+  {
+   "check": "duplicate (match, innings, ball number)",
+   "status": "PASS",
+   "value": 0,
+   "detail": ""
+  },
+  {
+   "check": "null identifiers in delivery table",
+   "status": "PASS",
+   "value": 0,
+   "detail": ""
+  },
+  {
+   "check": "bat runs outside 0-7",
+   "status": "PASS",
+   "value": 0,
+   "detail": ""
+  },
+  {
+   "check": "is_four/is_six inconsistent with runs",
+   "status": "PASS",
+   "value": 0,
+   "detail": ""
+  },
+  {
+   "check": "overs with >6 legal balls",
+   "status": "WARN",
+   "value": 1,
+   "detail": "legal = not wide/no-ball/penalty | isolated source anomaly; record kept and flagged, impact negligible"
+  },
+  {
+   "check": "overid outside 1-20",
+   "status": "PASS",
+   "value": 0,
+   "detail": ""
+  },
+  {
+   "check": "overs with <6 legal balls (innings ends / interrupted)",
+   "status": "WARN",
+   "value": 581,
+   "detail": "expected at innings end; flagged not dropped"
+  },
+  {
+   "check": "is_wicket vs dismissal_type disagreement",
+   "status": "PASS",
+   "value": 0,
+   "detail": ""
+  },
+  {
+   "check": "dismissed_player_id present without a wicket",
+   "status": "WARN",
+   "value": 12,
+   "detail": "rows ignored for wicket logic; dismissal_type is authoritative"
+  },
+  {
+   "check": "player_id with >1 name",
+   "status": "PASS",
+   "value": 0,
+   "detail": ""
+  },
+  {
+   "check": "names shared by different player_ids",
+   "status": "WARN",
+   "value": [
+    "Abdul Samad",
+    "Basil Hameed",
+    "Haider Ali"
+   ],
+   "detail": "different players with identical names; analysis keys on player_id and disambiguates in display"
+  },
+  {
+   "check": "striker == non-striker",
+   "status": "WARN",
+   "value": 1,
+   "detail": "isolated source anomaly; record kept and flagged, impact negligible"
+  },
+  {
+   "check": "batting team == bowling team",
+   "status": "PASS",
+   "value": 0,
+   "detail": ""
+  },
+  {
+   "check": "delivery players absent from player mapping",
+   "status": "PASS",
+   "value": 0,
+   "detail": ""
+  },
+  {
+   "check": "matches without ball-by-ball data",
+   "status": "WARN",
+   "value": 16,
+   "detail": "results: {'Match Abandoned': 16}"
+  },
+  {
+   "check": "innings totals reconcile with stated run margin",
+   "status": "PASS",
+   "value": 1.0,
+   "detail": "360 decided-by-runs matches; validates total = runs + extras"
+  },
+  {
+   "check": "super-over innings (3/4)",
+   "status": "WARN",
+   "value": 6,
+   "detail": "present; excluded from pressure analysis"
+  },
+  {
+   "check": "in-scope deliveries",
+   "status": "PASS",
+   "value": 191903,
+   "detail": "803 matches"
+  }
+ ]
+}

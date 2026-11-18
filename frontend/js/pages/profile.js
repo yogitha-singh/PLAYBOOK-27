@@ -1,0 +1,31 @@
+import { html, raw, n0, n1, n2, n3, signed1, frac, pct1 } from '../util.js';
+import { tierBadge, confBadge, callout } from '../components.js';
+import { bars, grouped, forest } from '../charts.js';
+import { url } from '../api.js';
+
+/** Scouting card. `d` = /players/{id}.profiles[role]; `ex` = /players/{id}/explain (or null for non-ranked players). */
+export function profileView(d, ex, role) {
+  const bat = role === 'bat';
+  const phases = bat ? [['Powerplay', d.sr_powerplay], ['Middle', d.sr_middle], ['Death', d.sr_death], ['Setting', d.sr_setting], ['Chasing', d.sr_chasing]] : [['Powerplay', d.econ_powerplay], ['Middle', d.econ_middle], ['Death', d.econ_death], ['Defending', d.econ_defending], ['Bowling in chase', d.econ_chasing_opp]];
+  const stats = bat ? [['Innings', n0(d.innings)], ['Runs', n0(d.runs)], ['Average', n1(d.average)], ['Strike rate', n1(d.strike_rate)], ['Boundary %', pct1(d.boundary_pct)], ['Dot ball %', pct1(d.dot_pct)]]
+    : [['Matches', n0(d.matches)], ['Wickets', n0(d.wickets)], ['Economy', n2(d.economy)], ['Average', n1(d.average)], ['Strike rate (balls/wkt)', n1(d.strike_rate)], ['Dot ball %', pct1(d.dot_pct)]];
+  const pvb = bat ? { cats: ['Strike rate', 'Dismissal % ×10'], a: [d.p_strike_rate, 10 * d.p_dismissal_rate_pct], b: [d.b_strike_rate, 10 * d.b_dismissal_rate_pct] } : { cats: ['Economy', 'Wickets/over ×10'], a: [d.p_economy, 10 * d.p_wicket_rate_per_over], b: [d.b_economy, 10 * d.b_wicket_rate_per_over] };
+  const eva = bat ? [{ label: 'Runs above expected (pressure)', value: d.p_runs_above_exp }, { label: 'Dismissals below expected', value: d.p_dismissals_below_exp }] : [{ label: 'Runs saved vs expected (pressure)', value: d.p_runs_saved_vs_exp }, { label: 'Wickets above expected', value: d.p_wkts_above_exp }];
+  const ranked = d.status === 'Ranked';
+  return html`<article class="profile" aria-labelledby="pf-name">
+  <header class="pf-head"><div><p class="eyebrow">${bat ? 'BATTER' : 'BOWLER'} · SCOUTING CARD</p><h2 id="pf-name">${d.player}</h2>
+  <p class="muted">Inferred role: <strong>${d.role_inferred}</strong>${d.latest_team_ipl ? ` · IPL: ${d.latest_team_ipl}` : ''}${d.latest_team_t20i ? ` · T20I: ${d.latest_team_t20i}` : ''}</p><p>${ranked ? tierBadge(d.tier) : html`<span class="badge conf-low">${d.status}</span>`} ${confBadge(d.sample_confidence)}</p></div>
+  <div class="pf-score"><div class="pf-big">${ranked ? n1(d.PRI) : '–'}</div><div class="muted small">PRI${ranked ? ` (90%: ${n1(d.PRI_lo)}–${n1(d.PRI_hi)})` : ''}<br>${ranked ? `rank ${d.rank} (resampling range ${d.rank_lo}–${d.rank_hi})` : 'not ranked: below minimum pressure sample'}</div></div></header>
+  <div class="pf-actions"><button class="btn primary" data-add="${d.player_id}" data-role="${role}">Add to shortlist</button> <a class="btn" href="#/compare?role=${role}&ids=${d.player_id}">Compare</a> <a class="btn" href="${url(`/scouting/report/${role}/${d.player_id}.pdf`)}" download>Download PDF card</a></div>
+  ${(d.risk_flags || []).length ? callout('warn', 'Risk flags', d.risk_flags.join('; ')) : ''}
+  <div class="grid-2"><section><h3>Why this PRI</h3>${ex ? html`<p class="muted small">${ex.formula}. Components sum to the published score.</p>${raw(bars(ex.components.map((c) => ({ label: c.component.split(' (')[0], value: c.pri_points })), { label: 'PRI points contributed by each component', fmt: (v) => v.toFixed(2) }))}<ul class="plain small">${ex.components.map((c) => html`<li><strong>${c.component.split(' (')[0]}</strong>: z=${n2(c.z)} — ${c.weight_note}</li>`)}</ul>
+  <p class="small">Shrinkage: ${frac(ex.shrinkage.weight_on_own_data)} of the level estimate comes from this player's own data (raw ${signed1(ex.shrinkage.raw_level_per100)} → shrunk ${signed1(ex.shrinkage.shrunk_level_per100)} per 100 pressure deliveries; ± ${n1(ex.shrinkage.level_sd_per100)}). P(top 10 under resampling) ${frac(ex.uncertainty.p_top10)}; top 10 in ${frac(ex.uncertainty.sensitivity_grid_share_top10)} of alternative configurations.</p><p class="muted small">${ex.caution}</p>` : html`<p class="muted">Score decomposition is available for ranked players only.</p>`}</section>
+  <section><h3>Evidence</h3><dl class="stats"><div><dt>Pressure deliveries (statistical n)</dt><dd>${n0(d.pressure_deliveries)}</dd></div><div><dt>Pressure legal balls</dt><dd>${n0(d.pressure_legal_balls)}</dd></div><div><dt>Pressure appearances (≥6 balls)</dt><dd>${n0(d.pressure_appearances)}</dd></div><div><dt>Value vs average, per 100 pressure deliveries</dt><dd>${signed1(d.level100)} ± ${n1(d.level_sd100)}</dd></div><div><dt>Consistency (appearances above expectation)</dt><dd>${pct1(d.consistency_pct)}</dd></div><div><dt>Clutch delta (vs own baseline)</dt><dd>${signed1(d.delta100)} <span class="muted small">(no detectable signal; zero weight)</span></dd></div></dl></section></div>
+  <div class="grid-2"><section><h3>${bat ? 'Strike rate & dismissals' : 'Economy & wickets'}: pressure vs other</h3>${raw(grouped(pvb.cats, [{ name: 'Pressure', values: pvb.a }, { name: 'Other', values: pvb.b }], { label: 'Pressure versus other situations', height: 240 }))}</section>
+  <section><h3>Expected vs actual under pressure</h3>${raw(bars(eva, { label: 'Pressure outcomes relative to what an average player achieves in the same situations' }))}<p class="muted small">Positive = better than an average player in the same situations.</p></section></div>
+  <section><h3>${bat ? 'Strike rate by phase and innings' : 'Economy by phase and innings'} <span class="muted small">(≥30 balls only)</span></h3>${raw(bars(phases.filter((p) => p[1] != null).map(([l, v]) => ({ label: l, value: v, color: '#5B6BA8' })), { label: 'By phase', fmt: n1 })) || '<p class="muted">Not enough balls in individual phases.</p>'}</section>
+  <div class="grid-2"><section><h3>Strengths (data-backed)</h3><p>${d.strengths}</p></section><section><h3>Risks</h3><p>${d.risks}</p></section></div>
+  <section><h3>Suitable situations</h3><p>${d.situations}</p></section>
+  <section><h3>Career numbers in dataset</h3><dl class="stats">${stats.map(([k, v]) => html`<div><dt>${k}</dt><dd>${v}</dd></div>`)}</dl></section>
+  <p class="muted small">${d.role_inferred_note}. ${d.availability_note}.</p></article>`;
+}

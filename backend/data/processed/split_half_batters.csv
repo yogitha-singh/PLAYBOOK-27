@@ -1,0 +1,8 @@
+measure,half_half_spearman,spearman_brown_full,reps
+level_raw,-0.083,-0.18,60
+delta_raw,-0.115,-0.26,60
+cons_raw,0.049,0.093,60
+level,0.168,0.288,60
+delta,-0.116,-0.263,60
+cons,0.045,0.087,60
+composite,0.108,0.194,60

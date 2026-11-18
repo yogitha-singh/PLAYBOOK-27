@@ -1,0 +1,34 @@
+[
+ {
+  "cutoff": "2025-03-31",
+  "n_players": 60,
+  "spearman_with_late_pressure_value": {
+   "PRI composite (early)": -0.15232008891358714,
+   "pressure LEVEL shrunk (early)": -0.11419838844123369,
+   "pressure DELTA shrunk (early)": null,
+   "pressure CONSISTENCY shrunk (early)": -0.1990019645121778,
+   "conventional all-ball value (early)": -0.11114198388441236,
+   "pressure level raw (early)": -0.32425673798277305
+  },
+  "weighted_R2_conventional_only": 2.3036488228100893e-07,
+  "weighted_R2_conventional_plus_PRI": 0.00831173671296448,
+  "late_pressure_value_per100_early_top10_mean": 11.65649950628882,
+  "late_pressure_value_per100_all_eligible_mean": 16.394026217523802
+ },
+ {
+  "cutoff": "2025-07-31",
+  "n_players": 45,
+  "spearman_with_late_pressure_value": {
+   "PRI composite (early)": -0.36877470355731223,
+   "pressure LEVEL shrunk (early)": -0.30527009222661394,
+   "pressure DELTA shrunk (early)": null,
+   "pressure CONSISTENCY shrunk (early)": -0.33034655709116195,
+   "conventional all-ball value (early)": -0.0968379446640316,
+   "pressure level raw (early)": -0.13175230566534912
+  },
+  "weighted_R2_conventional_only": 0.004549168962757033,
+  "weighted_R2_conventional_plus_PRI": 0.05944507049120151,
+  "late_pressure_value_per100_early_top10_mean": -2.804943632838955,
+  "late_pressure_value_per100_all_eligible_mean": 17.716112586718186
+ }
+]

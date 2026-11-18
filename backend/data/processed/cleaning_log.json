@@ -1,0 +1,15 @@
+{
+ "rows_in": 200999,
+ "wicket_flag_vs_dismissal_type_disagreements": 0,
+ "rows_out": 200999,
+ "matches_with_ball_data": 867,
+ "excluded_single_innings": 22,
+ "excluded_interrupted_dls_or_revised_overs": 29,
+ "excluded_truncated_innings": 13,
+ "matches_in_scope": 803,
+ "in_scope_by_tier": {
+  "T20I": 420,
+  "IPL": 353,
+  "EMERGING": 30
+ }
+}
