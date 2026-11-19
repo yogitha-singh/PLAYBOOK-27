@@ -1,126 +1,298 @@
-<div align="center">
+\<div align="center">
 
 # PLAYBOOK 27
+
 ### THE SCIENCE BEHIND THE SELECTION
 
-**A pressure-aware cricket analytics and player intelligence platform.**
+**Pressure-Aware Cricket Analytics & Player Intelligence**
 
-Transforming ball-by-ball match data into contextual performance insights, uncertainty-aware player evaluations, and explainable scouting intelligence.
+An analytical platform combining machine learning, statistical modelling, contextual performance evaluation and uncertainty-aware player rankings.
 
-<br>
+\<br>
 
-[![Live Dashboard](https://img.shields.io/badge/LIVE-DASHBOARD-EA1A85?style=for-the-badge)](https://playbook-27.onrender.com/)
-[![GitHub](https://img.shields.io/badge/GITHUB-REPOSITORY-0A1F44?style=for-the-badge&logo=github)](https://github.com/yogitha-singh/PLAYBOOK-27)
+\
 
-<br>
+
+\<br>
 
 `CRICKET ANALYTICS` · `MACHINE LEARNING` · `PREDICTIVE MODELLING` · `PLAYER SCOUTING`
 
-<br>
+### NOT JUST WHO SCORES MORE.
+
+### WHO PERFORMS WHEN IT MATTERS.
+
+\</div>
 
 ---
 
-### NOT JUST WHO SCORES MORE. WHO PERFORMS WHEN IT MATTERS.
+## 01 — Project Overview
 
-</div>
+Cricket performance is traditionally evaluated through statistics such as runs, wickets, averages and strike rates.
 
-## ◈ Explore the Platform
+However, these metrics do not always capture the circumstances in which a performance occurs.
 
-<div align="center">
+A run scored in a comfortable situation is not necessarily equivalent to a run scored during a difficult chase. Similarly, a wicket taken during a critical phase can carry greater strategic significance than one taken when the outcome is already decided.
 
-### [↗ OPEN THE LIVE PLAYBOOK 27 DASHBOARD](https://playbook-27.onrender.com/)
+**PLAYBOOK 27** explores this problem through pressure-aware cricket analytics.
 
-*Explore player intelligence, pressure analysis, rankings, model insights, and performance comparisons.*
+Developed for **Rajasthan Royals SupeRR Selector — Season 2, Round 1**, the platform evaluates batter and bowler performances under pressure using match-state modelling, contextual expectations, statistical reliability and uncertainty-aware ranking methods.
 
-</div>
-
-> **Deployment note:** The dashboard is hosted on Render's free tier. If the service has been inactive, its first request may take a little longer while it wakes up.
-
----
-
-## 01 — The Project
-
-Cricket performance is often evaluated through conventional statistics such as runs, wickets, averages, and strike rates.
-
-However, these numbers do not always explain the context in which a performance occurred.
-
-A run scored in a low-pressure situation is not necessarily equivalent to a run scored during a difficult chase. Similarly, a wicket taken when the match is already under control may not carry the same strategic significance as one taken during a critical phase.
-
-**PLAYBOOK 27** explores this problem through a context-aware analytical framework.
-
-Developed for **Rajasthan Royals SupeRR Selector — Season 2**, the platform evaluates batter and bowler performances under pressure using match-state modelling, contextual expectations, statistical reliability, and uncertainty-aware ranking methods.
-
-The objective is not simply to produce another leaderboard.
-
-It is to investigate:
+The objective is to investigate:
 
 - How does a player perform when match pressure increases?
-- Does their performance exceed what would normally be expected in that situation?
+- Does their performance exceed expectations in comparable situations?
 - How reliable is the observed performance?
-- Do player rankings remain stable under different analytical assumptions?
-- How much confidence should be placed in a player's position?
+- Do rankings remain stable under different analytical assumptions?
+- How much confidence should be placed in a player's ranking?
 
-The platform brings these questions together through an interactive scouting dashboard.
-
----
-
-## 02 — What the Platform Offers
-
-| Module | What it explores |
-|---|---|
-| **Command Centre** | Overview of the platform's key analytical findings and player intelligence. |
-| **Batter Intelligence** | Contextual batter performance and pressure-specific evaluation. |
-| **Bowler Intelligence** | Bowler performance across pressure situations and match phases. |
-| **Pressure Explorer** | Distribution and characteristics of pressure across match situations. |
-| **Player Comparison** | Side-by-side comparison of player performance indicators. |
-| **Reliability Leaderboard** | Player evaluation incorporating statistical reliability. |
-| **Ranking Stability** | Sensitivity of player rankings to analytical assumptions. |
-| **Data & Model Status** | Dataset and modelling status information. |
-| **Model Insights** | Predictive model performance and analytical findings. |
-| **Methodology** | Explanation of the evaluation framework and its limitations. |
+The result is an interactive scouting platform designed to turn match data into explainable player intelligence.
 
 ---
 
-## 03 — Dashboard Preview
+## 02 — Explore the Dashboard
 
-The platform consists of ten interactive analytical views, each designed to explore a different aspect of cricket performance and player evaluation.
+\<div align="center">
 
-<div align="center">
+### [↗ OPEN PLAYBOOK 27 — LIVE DASHBOARD](https://playbook-27.onrender.com/)
 
-| Dashboard Module | Description |
-|:---|:---|
-| **01. Command Centre** | Overall platform overview and key insights |
-| **02. Batter Intelligence** | Pressure-aware batter evaluation |
-| **03. Bowler Intelligence** | Bowler performance under pressure |
-| **04. Pressure Explorer** | Match pressure distribution and analysis |
-| **05. Player Comparison** | Comparative player evaluation |
-| **06. Reliability Leaderboard** | Reliability-adjusted player rankings |
-| **07. Ranking Stability** | Ranking sensitivity and consistency |
-| **08. Data & Model Status** | Dataset and model information |
-| **09. Model Insights** | Predictive model performance |
-| **10. Methodology** | Analytical framework and limitations |
+Explore all ten analytical modules through the deployed application.
 
-</div>
+\</div>
 
-Explore all ten modules through the [live PLAYBOOK 27 dashboard](https://playbook-27.onrender.com/).
+| Module                          | Description                                            |
+| ------------------------------- | ------------------------------------------------------ |
+| **01. Command Centre**          | Platform overview and key analytical findings.         |
+| **02. Batter Intelligence**     | Contextual batter performance and pressure evaluation. |
+| **03. Bowler Intelligence**     | Bowler performance across pressure situations.         |
+| **04. Pressure Explorer**       | Match pressure distribution and phase analysis.        |
+| **05. Player Comparison**       | Comparative player performance evaluation.             |
+| **06. Reliability Leaderboard** | Reliability-adjusted player rankings.                  |
+| **07. Ranking Stability**       | Sensitivity and consistency of player rankings.        |
+| **08. Data & Model Status**     | Dataset and model information.                         |
+| **09. Model Insights**          | Predictive model performance and findings.             |
+| **10. Methodology**             | Analytical framework and limitations.                  |
+
+> **Deployment:** Hosted on Render's free tier. The first request after inactivity may take a little longer while the service wakes up.
 
 ---
 
-## 04 — Analytical Framework
+## 03 — Main Dashboard Preview
+
+The primary dashboard consists of ten interactive analytical views.
+
+### 01. Command Centre
+
+\<div align="center"> \<img src="screenshots/Command%20Centre.png" width="100%" alt="PLAYBOOK 27 Command Centre"> \</div>
+
+### 02. Batter Intelligence
+
+\<div align="center"> \<img src="screenshots/Batter%20Intelligence.png" width="100%" alt="Batter Intelligence"> \</div>
+
+### 03. Bowler Intelligence
+
+\<div align="center">
+\<img src="screenshots/Bowler%20Intelligence.png" width="100%" alt="Bowler Intelligence">
+\</div>
+
+### 04. Pressure Explorer
+
+\<div align="center">
+\<img src="screenshots/Pressure%20Explorer.png" width="100%" alt="Pressure Explorer">
+\</div>
+
+### 05. Player Comparison
+
+\<div align="center"> \<img src="screenshots/Player%20Comparison.png" width="100%" alt="Player Comparison"> \</div>
+
+### 06. Reliability Leaderboard
+
+\<div align="center">
+\<img src="screenshots/Reliability%20Leaderboard.png" width="100%" alt="Reliability Leaderboard">
+\</div>
+
+### 07. Ranking Stability
+
+\<div align="center">
+\<img src="screenshots/Ranking%20Stability.png" width="100%" alt="Ranking Stability">
+\</div>
+
+### 08. Data & Model Status
+
+\<div align="center">
+\<img src="screenshots/Data%20and%20Model%20Status.png" width="100%" alt="Data and Model Status">
+\</div>
+
+### 09. Model Insights
+
+\<div align="center">
+\<img src="screenshots/Model%20Insights.png" width="100%" alt="Model Insights">
+\</div>
+
+### 10. Methodology
+
+\<div align="center">
+\<img src="screenshots/Methodology.png" width="100%" alt="Methodology">
+\</div>
+
+---
+
+## 04 — Responsive Dashboard Gallery
+
+The project also includes a separate collection of desktop, mobile and tablet screenshots documenting the interface across different screen sizes.
+
+These screenshots are maintained independently inside `docs/screenshots/`.
+
+### Desktop Experience
+
+\<div align="center">
+
+**Overview**
+
+\<img src="docs/screenshots/desktop_overview\.png" width="100%" alt="Desktop Overview">
+
+**Batters**
+
+\<img src="docs/screenshots/desktop_batters.png" width="100%" alt="Desktop Batters">
+
+**Bowlers**
+
+\<img src="docs/screenshots/desktop_bowlers.png" width="100%" alt="Desktop Bowlers">
+
+**Pressure Analysis**
+
+\<img src="docs/screenshots/desktop_pressure.png" width="100%" alt="Desktop Pressure Analysis">
+
+**Player Comparison**
+
+\<img src="docs/screenshots/desktop_compare.png" width="100%" alt="Desktop Player Comparison">
+
+**Leaderboard**
+
+\<img src="docs/screenshots/desktop_leaderboard.png" width="100%" alt="Desktop Leaderboard">
+
+**Models**
+
+\<img src="docs/screenshots/desktop_models.png" width="100%" alt="Desktop Models">
+
+**Auction**
+
+\<img src="docs/screenshots/desktop_auction.png" width="100%" alt="Desktop Auction">
+
+**Scenario Analysis**
+
+\<img src="docs/screenshots/desktop_scenario.png" width="100%" alt="Desktop Scenario Analysis">
+
+**About**
+
+\<img src="docs/screenshots/desktop_about.png" width="100%" alt="Desktop About">
+
+**Batter Scouting Card**
+
+\<img src="docs/screenshots/desktop_scouting_card_batter.png" width="100%" alt="Desktop Batter Scouting Card">
+
+\</div>
+
+### Mobile Experience
+
+\<div align="center">
+
+**Mobile Overview**
+
+\<img src="docs/screenshots/mobile_overview\.png" width="45%" alt="Mobile Overview">
+
+**Mobile Overview — Viewport**
+
+\<img src="docs/screenshots/mobile_overview_viewport.png" width="45%" alt="Mobile Overview Viewport">
+
+**Mobile Navigation**
+
+\<img src="docs/screenshots/mobile_menu_open.png" width="45%" alt="Mobile Navigation">
+
+**Batters**
+
+\<img src="docs/screenshots/mobile_batters.png" width="45%" alt="Mobile Batters">
+
+**Bowlers**
+
+\<img src="docs/screenshots/mobile_bowlers.png" width="45%" alt="Mobile Bowlers">
+
+**Pressure Analysis**
+
+\<img src="docs/screenshots/mobile_pressure.png" width="45%" alt="Mobile Pressure Analysis">
+
+**Player Comparison**
+
+\<img src="docs/screenshots/mobile_compare.png" width="45%" alt="Mobile Comparison">
+
+**Leaderboard**
+
+\<img src="docs/screenshots/mobile_leaderboard.png" width="45%" alt="Mobile Leaderboard">
+
+**Models**
+
+\<img src="docs/screenshots/mobile_models.png" width="45%" alt="Mobile Models">
+
+**Auction**
+
+\<img src="docs/screenshots/mobile_auction.png" width="45%" alt="Mobile Auction">
+
+**Scenario Analysis**
+
+\<img src="docs/screenshots/mobile_scenario.png" width="45%" alt="Mobile Scenario Analysis">
+
+**About**
+
+\<img src="docs/screenshots/mobile_about.png" width="45%" alt="Mobile About">
+
+**Batter Scouting Card**
+
+\<img src="docs/screenshots/mobile_scouting_card.png" width="45%" alt="Mobile Scouting Card">
+
+\</div>
+
+### Tablet Experience
+
+\<div align="center">
+
+**Tablet Overview**
+
+\<img src="docs/screenshots/tablet_overview\.png" width="85%" alt="Tablet Overview">
+
+**Tablet Batters**
+
+\<img src="docs/screenshots/tablet_batters.png" width="85%" alt="Tablet Batters">
+
+**Tablet Comparison**
+
+\<img src="docs/screenshots/tablet_compare.png" width="85%" alt="Tablet Comparison">
+
+**Tablet Scenario Analysis**
+
+\<img src="docs/screenshots/tablet_scenario.png" width="85%" alt="Tablet Scenario Analysis">
+
+\</div>
+
+---
+
+## 05 — Analytical Framework
 
 PLAYBOOK 27 follows a multi-stage analytical workflow.
 
 ```mermaid
 flowchart TD
-    A["Ball-by-Ball Match Data"] --> B["Data Processing & Validation"]
-    B --> C["Match-State Feature Engineering"]
-    C --> D["Leverage Index Modelling"]
-    D --> E["Pressure Situation Identification"]
-    E --> F["Contextual Performance Evaluation"]
-    F --> G["Player Intelligence & PRI"]
-    G --> H["Uncertainty & Reliability Analysis"]
-    H --> I["Sensitivity & Ranking Stability"]
-    I --> J["Interactive Scouting Dashboard"]
+    A["Ball-by-Ball Match Data"]
+    B["Data Processing & Validation"]
+    C["Match-State Feature Engineering"]
+    D["Leverage Index Modelling"]
+    E["Pressure Situation Identification"]
+    F["Contextual Performance Evaluation"]
+    G["Player Reliability Index"]
+    H["Uncertainty Analysis"]
+    I["Sensitivity & Ranking Stability"]
+    J["Interactive Scouting Dashboard"]
+
+    A --> B --> C --> D --> E
+    E --> F --> G --> H --> I --> J
 
     style A fill:#0A1F44,color:#fff
     style J fill:#EA1A85,color:#fff
@@ -128,180 +300,150 @@ flowchart TD
 
 ### Stage 1 — Data Processing
 
-Match-level and delivery-level information is processed to create structured analytical inputs.
+Match-level and delivery-level information is processed into structured analytical inputs.
 
-The pipeline prepares the data for match-state analysis, feature engineering, model training, and player evaluation.
+The pipeline prepares the data for feature engineering, model training, pressure identification and player evaluation.
 
 ### Stage 2 — Match-State Modelling
 
-Match situations are represented using contextual information such as:
+Match situations are represented through contextual variables, including:
 
 - Innings and match phase
 - Score and wickets
 - Overs and deliveries remaining
 - Required run rate
 - Chase situation
-- Other relevant match-state variables
-
-These variables help distinguish between situations with different levels of strategic difficulty.
+- Other relevant match-state features
 
 ### Stage 3 — Pressure Identification
 
-Pressure is defined using a model-based **Leverage Index**.
+Pressure is identified using a model-based **Leverage Index**.
 
-Rather than treating pressure as a subjective label, the framework identifies high-leverage situations using the distribution of leverage within an innings.
+The framework classifies situations using leverage percentiles within innings:
 
-The analytical framework uses:
-
-- **High pressure:** 80th–95th leverage percentile.
-- **Critical pressure:** Top 5% of leverage situations.
-- **Pressure deliveries:** High and Critical categories.
-
-This allows performance to be evaluated in relation to the difficulty of the match situation.
+| Category            | Leverage Percentile  |
+| ------------------- | -------------------- |
+| High Pressure       | 80th–95th percentile |
+| Critical Pressure   | Top 5%               |
+| Pressure Deliveries | High + Critical      |
 
 ### Stage 4 — Contextual Performance Evaluation
 
-A player's contribution is examined relative to the expected performance of an average player facing a comparable situation.
+Player contributions are evaluated relative to the expected performance of an average player in a comparable situation.
 
-This is important because raw outcomes alone do not account for the context in which they occurred.
+This helps distinguish raw statistical output from performance above contextual expectations.
 
-The framework therefore focuses on performance relative to a contextual expectation rather than treating every delivery as equivalent.
+### Stage 5 — Reliability Adjustment
 
-### Stage 5 — Player Reliability
+Empirical-Bayes shrinkage is incorporated to account for sample-size differences and reduce the influence of extreme estimates supported by limited observations.
 
-Observed performance can be misleading when it is based on a limited number of opportunities.
+### Stage 6 — Uncertainty and Stability
 
-PLAYBOOK 27 incorporates empirical-Bayes shrinkage to account for differences in sample size and statistical reliability.
-
-This helps reduce the influence of unusually extreme results from limited observations.
-
-### Stage 6 — Uncertainty and Ranking Stability
-
-A ranking is an estimate, not an absolute truth.
-
-The platform examines uncertainty and sensitivity to understand whether a player's position is robust or dependent on particular assumptions.
-
-This includes:
+The platform evaluates player assessments through:
 
 - Posterior uncertainty intervals
-- Reliability-adjusted player evaluation
-- Split-half persistence analysis
+- Split-half persistence
 - Sensitivity analysis
-- Ranking overlap and stability
+- Ranking overlap
+- Top-10 probability analysis
 
 ---
 
-## 05 — The Player Reliability Index
+## 06 — Player Reliability Index (PRI)
 
-The **Player Reliability Index (PRI)** is designed to support more cautious player evaluation.
+The **Player Reliability Index** supports cautious, uncertainty-aware player evaluation.
 
-Instead of rewarding only high observed performance, the framework considers how much confidence should be placed in the evidence behind that performance.
+Rather than relying exclusively on observed performance, PRI incorporates empirical-Bayes shrinkage and posterior uncertainty.
 
-The methodology incorporates:
+The reported conservative lower-bound formulation is:
 
-- Contextual performance level
-- Empirical-Bayes shrinkage
-- Statistical uncertainty
-- Reliability-adjusted evaluation
-
-The reported PRI uses a conservative lower-bound approach:
-
-\[
-PRI = \mu_{posterior} - 1.28 \times \sigma_{posterior}
-\]
+[
+PRI = \mu\_{posterior} - 1.28 \times \sigma\_{posterior}
+]
 
 Where:
 
-- \(\mu_{posterior}\) represents the posterior mean.
-- \(\sigma_{posterior}\) represents the posterior standard deviation.
+- (\mu\_{posterior}) represents the posterior mean.
+- (\sigma\_{posterior}) represents the posterior standard deviation.
 
-This provides a risk-adjusted estimate rather than relying exclusively on the observed average.
+The resulting score penalises estimates with greater uncertainty.
 
-The intention is to distinguish players with consistently supported performance from those whose apparent results may be more uncertain.
+The purpose is to distinguish strong observed performance from performance supported by more reliable evidence.
 
 ---
 
-## 06 — Model Validation
+## 07 — Model Validation
 
-Model performance is evaluated using chronological validation rather than relying only on random train-test splits.
+The modelling framework uses chronological validation to assess performance on later match periods.
 
-The validation design follows:
-
-| Dataset period | Purpose |
-|---|---|
-| Before 2025 | Training |
-| 2025 | Validation |
-| 2026 | Testing |
-
-This helps evaluate whether the models can generalise to later match periods.
+| Period      | Purpose    |
+| ----------- | ---------- |
+| Before 2025 | Training   |
+| 2025        | Validation |
+| 2026        | Testing    |
 
 ### Predictive Model Results
 
-The following reported results illustrate the different modelling tasks.
+| Model                 | Evaluation Metric | Result |
+| --------------------- | ----------------- | -----: |
+| Chase Win Probability | ROC-AUC           |  0.918 |
+| Chase Win Probability | Brier Score       |  0.123 |
+| Chase Win Probability | Log Loss          |  0.378 |
+| First-Innings Model   | ROC-AUC           |  0.684 |
+| First-Innings Model   | Log Loss          |  0.671 |
+| 9-Class Outcome Model | MAE               |  1.381 |
+| Flat Baseline         | MAE               |  1.438 |
+| Wicket Prediction     | ROC-AUC           |  0.587 |
 
-| Model | Evaluation Metric | Result |
-|---|---|---:|
-| Chase Win Probability | ROC-AUC | 0.918 |
-| Chase Win Probability | Brier Score | 0.123 |
-| Chase Win Probability | Log Loss | 0.378 |
-| First-Innings Model | ROC-AUC | 0.684 |
-| First-Innings Model | Log Loss | 0.671 |
-| 9-Class Outcome Model | MAE | 1.381 |
-| Flat Baseline | MAE | 1.438 |
-| Wicket Prediction | ROC-AUC | 0.587 |
+Predictive model performance and player-ranking reliability are separate considerations.
 
-Predictive performance and player-ranking reliability are different questions. A model that predicts match outcomes reasonably well does not automatically establish that pressure-specific player rankings are stable.
-
-For this reason, PLAYBOOK 27 evaluates both predictive performance and the reliability of the resulting player assessments.
+A model that predicts match outcomes effectively does not automatically establish that pressure-specific player rankings are stable.
 
 ---
 
-## 07 — Reliability Is Not the Same as Rank
+## 08 — Reliability Is Not the Same as Rank
 
-One of the central findings of this project is that pressure-specific performance has limited persistence across different samples of matches.
+An important finding of the analysis is that pressure-specific performance has limited persistence across different samples of matches.
 
-The reported split-half persistence is approximately:
+Reported split-half persistence:
 
-| Player Category | Split-Half Persistence |
-|---|---:|
-| Batters | 0.29 |
-| Bowlers | 0.24 |
+| Player Category | Persistence |
+| --------------- | ----------: |
+| Batters         |        0.29 |
+| Bowlers         |        0.24 |
 
-The rankings should therefore be interpreted as evidence with uncertainty, not as a definitive ordering of player ability.
+The rankings should therefore be interpreted as evidence with uncertainty, rather than definitive measurements of player ability.
 
-The analysis also examines:
+The analysis additionally investigates:
 
-- Whether players retain their positions under alternative assumptions.
-- Whether uncertainty intervals overlap.
-- How often players remain within the top group.
-- Whether the observed performance is supported by sufficient evidence.
+- Ranking stability under alternative assumptions.
+- Overlap between player uncertainty intervals.
+- Probability of genuinely belonging to the top ten.
+- Sensitivity to evaluation choices.
+- The impact of sample size on player reliability.
 
-**A player ranked higher is not automatically a player whose superiority has been established with certainty.**
-
-This distinction is fundamental to the platform's methodology.
-
----
-
-## 08 — Technology Stack
-
-The project combines data analysis, machine learning, backend development, and frontend visualisation.
-
-| Layer | Technologies |
-|---|---|
-| Programming Language | Python |
-| Data Processing | Pandas, NumPy |
-| Machine Learning | Scikit-learn |
-| Backend | Flask |
-| Database | SQLite |
-| Frontend | HTML5, CSS3, JavaScript |
-| Visualisation | SVG-based charts and interactive dashboard components |
-| Containerisation | Docker, Docker Compose |
-| Version Control | Git, GitHub |
-| Deployment | Render |
+**A higher ranking does not automatically establish that one player is statistically superior to another.**
 
 ---
 
-## 09 — Repository Structure
+## 09 — Technology Stack
+
+| Layer                | Technologies            |
+| -------------------- | ----------------------- |
+| Programming Language | Python                  |
+| Data Processing      | Pandas, NumPy           |
+| Machine Learning     | Scikit-learn            |
+| Backend              | Flask                   |
+| Database             | SQLite                  |
+| Frontend             | HTML5, CSS3, JavaScript |
+| Visualisation        | SVG Charts              |
+| Containerisation     | Docker, Docker Compose  |
+| Version Control      | Git, GitHub             |
+| Deployment           | Render                  |
+
+---
+
+## 10 — Repository Structure
 
 ```text
 PLAYBOOK-27/
@@ -312,13 +454,13 @@ PLAYBOOK-27/
 ├── backend/
 │   ├── data/
 │   │   └── processed/
-│   ├── ...
 │   └── ...
 │
 ├── data/
 │   └── processed/
 │
 ├── docs/
+│   ├── screenshots/
 │   ├── METHODOLOGY.md
 │   ├── FRONTEND.md
 │   ├── MODEL_CARD.md
@@ -334,99 +476,91 @@ PLAYBOOK-27/
 │
 ├── scripts/
 │
+├── screenshots/
+│
 ├── .gitignore
 ├── docker-compose.yml
 ├── README.md
 └── __init__.py
 ```
 
-*The tree is a high-level overview; individual implementation files are omitted for readability.*
+---
+
+## 11 — Documentation
+
+| Document                                       | Description                                   |
+| ---------------------------------------------- | --------------------------------------------- |
+| [Methodology](docs/METHODOLOGY.md)             | Analytical methodology and player evaluation. |
+| [Frontend](docs/FRONTEND.md)                   | Dashboard structure and implementation.       |
+| [Model Card](docs/MODEL_CARD.md)               | Model evaluation and limitations.             |
+| [Data Dictionary](docs/DATA_DICTIONARY.md)     | Analytical data fields.                       |
+| [Architecture](docs/ARCHITECTURE.md)           | System architecture.                          |
+| [API Documentation](docs/API_DOCUMENTATION.md) | Backend API information.                      |
+| [Deployment](docs/DEPLOYMENT.md)               | Deployment information.                       |
+| [Verification](docs/VERIFICATION.md)           | Testing and verification.                     |
 
 ---
 
-## 10 — Documentation
+## 12 — Running Locally
 
-The repository includes supporting documentation for the platform's analytical and technical components.
-
-| Document | Description |
-|---|---|
-| [Methodology](docs/METHODOLOGY.md) | Analytical methodology and player evaluation framework. |
-| [Frontend](docs/FRONTEND.md) | Dashboard structure and frontend implementation. |
-| [Model Card](docs/MODEL_CARD.md) | Model information, evaluation, and limitations. |
-| [Data Dictionary](docs/DATA_DICTIONARY.md) | Description of analytical data fields. |
-| [Architecture](docs/ARCHITECTURE.md) | System architecture and component organisation. |
-| [API Documentation](docs/API_DOCUMENTATION.md) | Backend API documentation. |
-| [Deployment](docs/DEPLOYMENT.md) | Deployment information. |
-| [Verification](docs/VERIFICATION.md) | Verification and testing information. |
-
----
-
-## 11 — Running Locally
-
-To explore or run the project locally:
-
-### 1. Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/yogitha-singh/PLAYBOOK-27.git
 ```
 
+### Navigate to the project
+
 ```bash
 cd PLAYBOOK-27
 ```
 
-### 2. Explore the project
+Review the backend, frontend, models and documentation directories for application setup and execution instructions.
 
-Review the backend, frontend, model, and documentation directories to understand the application structure.
-
-### 3. Review the setup instructions
-
-Refer to the repository's deployment and architecture documentation for the current environment configuration and execution instructions.
-
-> Local execution commands depend on the configured backend entry point and environment. Follow the repository documentation rather than assuming a default Flask startup command.
+Refer to the deployment documentation for environment-specific configuration.
 
 ---
 
-## 12 — Responsible Data Use
+## 13 — Responsible Data Use
 
 The project is designed around analytical evaluation and derived outputs.
 
-A few principles guide its use:
+Key principles:
 
-- Raw competition data should not be redistributed without the appropriate permission.
-- Model outputs should be interpreted in the context of their validation results.
+- Raw competition data should not be redistributed without appropriate permission.
+- Model predictions should be interpreted alongside validation results.
 - Rankings should not be treated as definitive measures of player ability.
-- Uncertainty and sample-size limitations should remain visible.
+- Statistical uncertainty and sample-size limitations should remain visible.
 - Predictive associations should not automatically be interpreted as causal relationships.
 
-The purpose of the platform is to support informed analysis, not to replace expert scouting judgement.
+The platform is intended to support informed scouting and analytical decision-making, not replace expert judgement.
 
 ---
 
-## 13 — Known Limitations
+## 14 — Limitations
 
 PLAYBOOK 27 is an analytical framework, not a claim of perfect player evaluation.
 
 Its limitations include:
 
-1. **Limited persistence:** Pressure-specific performance may not remain consistent across different samples of matches.
-2. **Sample-size effects:** Players have different numbers of opportunities in pressure situations.
+1. **Limited persistence:** Pressure-specific performance may not remain consistent across match samples.
+2. **Sample-size effects:** Players have different numbers of opportunities under pressure.
 3. **Model uncertainty:** Predictive models are subject to estimation error and distribution shifts.
-4. **Context dependence:** Match situations are complex and cannot always be fully represented by available features.
+4. **Context dependence:** Match situations cannot always be fully represented by available features.
 5. **Ranking sensitivity:** Alternative assumptions can change player ordering.
-6. **Interpretation risk:** A high ranking should not be interpreted as proof of future performance.
+6. **Interpretation risk:** A high ranking does not guarantee future performance.
 
-These limitations are part of the analytical results, not details to be hidden.
+These limitations are part of the analytical findings and should remain visible when interpreting the results.
 
 ---
 
-## 14 — Future Scope
+## 15 — Future Scope
 
-Potential extensions of the platform include:
+Potential extensions include:
 
 - More extensive out-of-sample evaluation.
 - Additional contextual player-performance indicators.
-- Improved calibration and uncertainty estimation.
+- Improved uncertainty estimation and calibration.
 - Further analysis of player-role differences.
 - More robust ranking stability experiments.
 - Expanded scouting visualisations.
@@ -434,32 +568,32 @@ Potential extensions of the platform include:
 
 ---
 
-## 15 — Acknowledgements
+## 16 — Acknowledgements
 
-Developed as an independent cricket analytics project for **Rajasthan Royals SupeRR Selector — Season 2**.
+Developed as an independent cricket analytics project for:
 
-The project brings together statistical modelling, machine learning, data engineering, and interactive visualisation to explore a simple but important question:
+**Rajasthan Royals SupeRR Selector — Season 2**
 
-<div align="center">
+Bringing together statistical modelling, machine learning, data engineering and interactive visualisation to explore one important question:
+
+\<div align="center">
 
 ### WHO PERFORMS WHEN THE GAME IS ON THE LINE?
+
+\<br>
 
 **PLAYBOOK 27**
 
 *Evidence over assumptions. Context over raw numbers. Reliability over certainty.*
 
-<br>
+\<br>
 
 [**EXPLORE THE LIVE DASHBOARD ↗**](https://playbook-27.onrender.com/)
 
-</div>
-
----
-
-<div align="center">
+\<br>
 
 Made with analytical curiosity and a love for the game.
 
-**PLAYBOOK 27 · 2026**
+**2026**
 
-</div>
+\</div>
