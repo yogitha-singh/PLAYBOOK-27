@@ -1,4 +1,4 @@
-﻿// Application shell: hash router, navigation, error boundary, focus management, shared dialog.
+// Application shell: hash router, navigation, error boundary, focus management, shared dialog.
 import * as api from './api.js';
 import { html, raw, esc, qs } from './util.js';
 import { skeleton, errorBox, toast, openDialog, closeDialog } from './components.js';
@@ -31,7 +31,7 @@ function renderNav(active) {
 async function render() {
   const { path, query } = parseHash(), page = byPath[path] || command, token = ++navToken, root = document.getElementById('view');
   renderNav(page.meta.path);
-  document.title = `${page.meta.title} Â· PLAYBOOK 27`;
+  document.title = `${page.meta.title} · PLAYBOOK 27`;
   document.getElementById('page-title').textContent = page.meta.title;
   document.getElementById('crumb').textContent = page.meta.title;
   document.body.classList.remove('nav-open');
