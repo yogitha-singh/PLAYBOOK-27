@@ -151,7 +151,9 @@ Uses processed analytical outputs and model artefacts to support consistent dash
 
 # 04. Dashboard Preview
 
+
 The application is organised into ten analytical modules.
+
 
 ### 01 — Command Centre
 
