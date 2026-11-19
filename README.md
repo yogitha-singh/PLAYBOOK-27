@@ -153,10 +153,6 @@ Uses processed analytical outputs and model artefacts to support consistent dash
 
 The application is organised into ten analytical modules.
 
-All screenshots are maintained in the independent root-level `screenshots/` directory of the repository.
-
-They are not stored inside `docs/`.
-
 ### 01 — Command Centre
 
 The primary analytical overview, bringing together the platform's key findings and player intelligence.
