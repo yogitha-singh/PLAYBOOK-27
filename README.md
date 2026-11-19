@@ -83,30 +83,26 @@ The platform brings these questions together through an interactive scouting das
 
 ## 03 — Dashboard Preview
 
-The dashboard is organised around ten analytical views.
+The platform consists of ten interactive analytical views, each designed to explore a different aspect of cricket performance and player evaluation.
 
-Once the screenshots folder is pushed to the repository, add the corresponding image filenames below.
+<div align="center">
 
-| Dashboard Module | Preview |
-|---|---|
-| Command Centre | `screenshots/` |
-| Batter Intelligence | `screenshots/` |
-| Bowler Intelligence | `screenshots/` |
-| Pressure Explorer | `screenshots/` |
-| Player Comparison | `screenshots/` |
-| Reliability Leaderboard | `screenshots/` |
-| Ranking Stability | `screenshots/` |
-| Data & Model Status | `screenshots/` |
-| Model Insights | `screenshots/` |
-| Methodology | `screenshots/` |
+| Dashboard Module | Description |
+|:---|:---|
+| **01. Command Centre** | Overall platform overview and key insights |
+| **02. Batter Intelligence** | Pressure-aware batter evaluation |
+| **03. Bowler Intelligence** | Bowler performance under pressure |
+| **04. Pressure Explorer** | Match pressure distribution and analysis |
+| **05. Player Comparison** | Comparative player evaluation |
+| **06. Reliability Leaderboard** | Reliability-adjusted player rankings |
+| **07. Ranking Stability** | Ranking sensitivity and consistency |
+| **08. Data & Model Status** | Dataset and model information |
+| **09. Model Insights** | Predictive model performance |
+| **10. Methodology** | Analytical framework and limitations |
 
-> **Screenshot paths:** Replace the entries with the exact PNG filenames in your `screenshots` folder. GitHub image embeds require the actual file path, including its filename.
+</div>
 
-Example:
-
-```markdown
-![Command Centre](screenshots/your-actual-filename.png)
-```
+Explore all ten modules through the [live PLAYBOOK 27 dashboard](https://playbook-27.onrender.com/).
 
 ---
 
